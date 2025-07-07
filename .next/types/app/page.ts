@@ -1,4 +1,4 @@
-// File: D:\Ngoding\Repo Local Github\repogithub\app\page.tsx
+// File: D:\Ngoding\RepoGithub\portofolio\app\page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
