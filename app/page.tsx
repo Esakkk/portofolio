@@ -4,6 +4,7 @@ import Link from "next/link";
 import Squares from "./plugin/Squares/Squares";
 import CircularText from "./plugin/CircularText/CircularText";
 import SplashCursor from "./plugin/SplashCursor/SplashCursor";
+import Lanyard from "./plugin/Lanyard/Lanyard";
 
 export default function Home() {
   return (
@@ -17,6 +18,11 @@ export default function Home() {
           borderColor="#202a2b"
           hoverFillColor="#0245A3"
         />
+      </div>
+      <div className="absolute overflow-x-hidden w-full">
+        <div className="relative left-[520px] z-0">
+          <Lanyard position={[0, 0, 19]} gravity={[0, -50, 0]} />
+        </div>
       </div>
       <div className="relative navbar z-20">
         <div className="grid grid-cols-6 pt-[38px]">
