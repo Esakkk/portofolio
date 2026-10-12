@@ -8,8 +8,10 @@ export default function RoundButton({
   ring = "Explore More · Explore More · ",
   label = ["Push", "me!"],
   className = "",
+  onClick,
 }: {
   href: string;
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
   ring?: string;
   label?: [string, string];
   className?: string;
@@ -18,6 +20,7 @@ export default function RoundButton({
   return (
     <motion.a
       href={href}
+      onClick={onClick}
       className={`group relative grid h-44 w-44 shrink-0 place-items-center rounded-full text-cream ${className}`}
       whileHover={{ scale: 1.06 }}
       whileTap={{ scale: 0.94 }}

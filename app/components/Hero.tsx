@@ -33,17 +33,16 @@ export default function Hero() {
 
       <h1 className="font-serif text-cream">
         <Line delay={0.3} className="text-[15vw] leading-[0.85] font-medium tracking-[-0.02em] uppercase md:text-[10.5vw] xl:text-[9.5rem]">
-          Building
+          Packets
         </Line>
         <Line delay={0.42} className="text-[15vw] leading-[0.85] font-medium tracking-[-0.02em] uppercase md:text-[10.5vw] xl:text-[9.5rem]">
-          Reliable
+          Flow
         </Line>
         <Line delay={0.54} className="text-[13vw] leading-[0.9] italic md:text-[8.5vw] xl:text-[7.5rem]">
-          networks
+          Clean Logic
         </Line>
         <Line delay={0.66} className="mt-1 text-[7vw] leading-none md:text-[4.5vw] xl:text-[4rem]">
-          <span className="italic">&amp; the</span> <span className="font-bold">web</span>{" "}
-          <span className="italic">on top</span>
+          <span className="italic">&amp; Full</span> <span className="font-bold">Stack</span>{" "}
         </Line>
       </h1>
 

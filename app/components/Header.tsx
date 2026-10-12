@@ -57,7 +57,7 @@ export default function Header() {
         {open && (
           <motion.nav
             id="site-menu"
-            className="fixed inset-0 z-40 flex flex-col justify-between bg-night px-5 pt-28 pb-10 sm:px-10"
+            className="fixed inset-0 z-40 flex flex-col justify-between gap-10 overflow-y-auto bg-night px-5 pt-28 pb-10 sm:px-10"
             initial={{ clipPath: "inset(0 0 100% 0)" }}
             animate={{ clipPath: "inset(0 0 0% 0)" }}
             exit={{ clipPath: "inset(0 0 100% 0)" }}

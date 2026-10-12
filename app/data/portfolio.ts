@@ -2,17 +2,17 @@
 // komponen di app/components akan menyesuaikan otomatis.
 
 export const profile = {
-  firstName: "Muhammad",
+  firstName: "Muhammad Hardian",
   lastName: "Esa",
   fullName: "Muhammad Hardian Esa",
-  role: "Network Engineer & Web Developer",
+  role: "IT ENTHUSIAST & SYSTEM OPERATIONS",
   location: "Indonesia",
   timeZone: "Asia/Jakarta",
   intro:
-    "Network engineer & web developer from Indonesia. I keep networks fast and stable behind the scenes — then build clean, thoughtful websites on top of them.",
+    "Debugging networks, shipping clean code, and automating workflows so nothing breaks twice.",
   github: "https://github.com/esakkk",
   // Isi kalau mau muncul di bagian kontak (kosongkan = disembunyikan)
-  email: "",
+  email: "m.hardianesa17@gmail.com",
   linkedin: "",
   instagram: "",
 };
@@ -68,7 +68,7 @@ export const services: Service[] = [
     title: "Web Development",
     description:
       "Fast, responsive websites with a little extra motion and personality — built with modern tooling.",
-    tools: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    tools: ["Next.js", "React", "Laravel", "Tailwind CSS"],
   },
   {
     title: "Creative Coding",
@@ -81,8 +81,10 @@ export const services: Service[] = [
 export type Milestone = { year: string; title: string; place: string; note: string };
 
 export const journey: Milestone[] = [
-  { year: "20XX", title: "Started in Networking", place: "Sekolah / Kampus", note: "Isi sendiri" },
-  { year: "20XX", title: "First Certification", place: "Lembaga", note: "Isi sendiri" },
-  { year: "20XX", title: "First Website Shipped", place: "Proyek pribadi", note: "Isi sendiri" },
-  { year: "20XX", title: "Internship / Job", place: "Perusahaan", note: "Isi sendiri" },
+  { year: "2022", title: "Started in Networking", place: "SMKN 01 Kedungwuni", note: "3 Years Computer and Network Engineering" },
+  { year: "2025", title: "Internship / Job", place: "PT Qalby Cahaya Network", note: "Helpdesk & Junior Network Operations" },
+  { year: "2025", title: "First Certification", place: "IDN.ID", note: "MTCNA Certified" },
+  { year: "2025", title: "Joined Full-Time", place: "PT Qalby Cahaya Network", note: "Helpdesk & Network Operations" },
+  { year: "2026", title: "Advanced Routing Certification", place: "IDN.ID", note: "MTCRE Certified" },
+  { year: "2027", title: "Next Milestone", place: "Future", note: "Full-Stack / DevOps Engineer" },
 ];

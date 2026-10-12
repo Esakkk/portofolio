@@ -6,6 +6,17 @@ import { profile } from "../data/portfolio";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
+/**
+ * Di HP, mailto: langsung membuka aplikasi email (Gmail, dll).
+ * Di desktop sering tidak ada aplikasi email, jadi buka jendela tulis Gmail di tab baru.
+ */
+function openEmail(e: React.MouseEvent<HTMLAnchorElement>) {
+  if (!window.matchMedia("(pointer: fine)").matches) return;
+  e.preventDefault();
+  const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(profile.email)}`;
+  window.open(url, "_blank", "noopener,noreferrer");
+}
+
 function LocalTime() {
   const [time, setTime] = useState("");
   useEffect(() => {
@@ -26,7 +37,6 @@ function LocalTime() {
 export default function Contact() {
   const links = [
     { label: "GitHub", href: profile.github },
-    { label: "Email", href: profile.email && `mailto:${profile.email}` },
     { label: "LinkedIn", href: profile.linkedin },
     { label: "Instagram", href: profile.instagram },
   ].filter((l) => l.href);
@@ -60,9 +70,27 @@ export default function Contact() {
           </span>
         </h2>
 
+        {profile.email && (
+          <div className="mt-8 flex justify-center">
+            <a
+              href={`mailto:${profile.email}`}
+              onClick={openEmail}
+              aria-label="Send me an email"
+              title="Send me an email"
+              className="grid h-16 w-16 place-items-center rounded-full border border-cream/40 text-cream transition-colors duration-500 hover:bg-cream hover:text-night"
+            >
+              <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m3.5 6.5 8.5 6.5 8.5-6.5" strokeLinejoin="round" />
+              </svg>
+            </a>
+          </div>
+        )}
+
         <div className="mt-14 flex flex-col items-center gap-10 md:flex-row md:justify-center md:gap-16">
           <RoundButton
             href={profile.email ? `mailto:${profile.email}` : profile.github}
+            onClick={profile.email ? openEmail : undefined}
             ring="Get in touch · Get in touch · "
             label={["Say", "hi!"]}
           />

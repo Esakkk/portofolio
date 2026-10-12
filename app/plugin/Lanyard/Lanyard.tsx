@@ -19,6 +19,7 @@
   } from "@react-three/rapier";
   import { MeshLineGeometry, MeshLineMaterial } from "meshline";
   import * as THREE from "three";
+  import { useCardTexture } from "./cardTexture";
 
   // replace with your own imports, see the usage snippet for details
   const cardGLB = "/assets/card.glb";
@@ -116,6 +117,7 @@
 
     const { nodes, materials } = useGLTF(cardGLB) as any;
     const texture = useTexture(lanyard);
+    const cardTexture = useCardTexture();
     const [curve] = useState(
       () =>
         new THREE.CatmullRomCurve3([
@@ -265,12 +267,11 @@
             >
               <mesh geometry={nodes.card.geometry}>
                 <meshPhysicalMaterial
-                  map={materials.base.map}
-                  map-anisotropy={16}
+                  map={cardTexture}
                   clearcoat={1}
                   clearcoatRoughness={0.15}
-                  roughness={0.9}
-                  metalness={0.8}
+                  roughness={0.7}
+                  metalness={0.15}
                 />
               </mesh>
               <mesh
